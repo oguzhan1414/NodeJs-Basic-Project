@@ -1,56 +1,57 @@
-# Node.js Web Application
+<h1 align="center">Node.js Basic Project (RESTful API)</h1>
 
-## Overview
-This is a professional Node.js web application project designed to be scalable and efficient. 
+<p align="center">
+  <i>Güvenli, ölçeklenebilir ve modern Node.js tabanlı Backend API şablonu.</i>
+</p>
 
-## Features
-- **RESTful API**: Built with Express to provide secure and efficient data handling.
-- **Database Integration**: Supports MongoDB for persistent data storage.
-- **Authentication**: Implemented JWT for user authentication.
-- **Real-Time Data**: Utilizes Socket.io for real-time communication.
-- **Responsive Design**: Compatible with mobile and desktop devices.
+<p align="center">
+  <img src="https://img.icons8.com/color/48/000000/nodejs.png" alt="Node.js" title="Node.js" />
+  <img src="https://img.icons8.com/color/48/000000/express-js.png" alt="Express.js" title="Express.js" />
+  <img src="https://img.icons8.com/color/48/000000/mongodb.png" alt="MongoDB" title="MongoDB" />
+</p>
 
-## Installation Instructions
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/oguzhan1414/NodeJs-Basic-Project.git
-   cd NodeJs-Basic-Project
-   ```
-2. Install the dependencies:
-   ```bash
-   npm install
-   ```
-3. Set up your environment variables by creating a `.env` file based on the `.env.example` provided.
-4. Start the application:
-   ```bash
-   npm start
-   ```
+---
 
-## Usage
-- Open your browser and navigate to `http://localhost:3000` to access the application.
-- Use Postman or any API client to test the endpoints.
+## 🚀 Proje Özeti
 
-## Contribution Guidelines
-1. Fork the repository.
-2. Create a new branch for your feature/fix:
-   ```bash
-   git checkout -b feature/my-feature
-   ```
-3. Commit your changes:
-   ```bash
-   git commit -m 'Add some feature'
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature/my-feature
-   ```
-5. Open a Pull Request.
+Bu proje, **Node.js** ve **Express.js** kullanılarak geliştirilmiş, ölçeklenebilir ve güvenli bir RESTful API temel (starter) şablonudur. Veritabanı olarak **MongoDB** entegrasyonu bulunmakta olup, kullanıcı kimlik doğrulama, veri doğrulama, oran sınırlama (rate-limiting) ve gelişmiş hata yönetimi gibi modern backend uygulamalarının ihtiyaç duyduğu tüm temel gereksinimleri barındırır. Yeni projelere hızlıca başlamak ve temiz bir mimari üzerinden ilerlemek için tasarlanmıştır.
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+## ✨ Temel Özellikler
 
-## Security Information
-Ensure to keep your dependencies updated and regularly check for vulnerabilities using:
+*   **RESTful API Mimarisi:** Express.js ile yapılandırılmış temiz ve esnek yönlendirme (routing).
+*   **MongoDB Veritabanı:** Mongoose kullanılarak kurgulanan güçlü veri modelleri ve veritabanı bağlantısı.
+*   **JWT Kimlik Doğrulama (Authentication):** JSON Web Token ile güvenli kullanıcı girişi ve oturum yönetimi.
+*   **Şifre Güvenliği (Bcrypt):** Kullanıcı şifrelerinin veritabanına şifrelenerek güvenle kaydedilmesi.
+*   **Veri Doğrulama (Joi):** Gelen isteklerin (request) model seviyesinde sıkı bir şekilde denetlenmesi.
+*   **Gelişmiş Hata Yönetimi:** `express-async-errors` ve özelleştirilmiş *Error Handler middleware* ile asenkron fonksiyonlarda güvenli hata yakalama.
+*   **Rate Limiting:** Sunucuyu kötü amaçlı ardışık isteklere ve DDoS benzeri saldırılara karşı koruyan istek sınırlandırıcı.
+
+## ⚙️ Kurulum Rehberi
+
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları sırasıyla izleyebilirsiniz:
+
+1. **Projeyi Klonlayın**
 ```bash
-yarn audit
+git clone https://github.com/oguzhan1414/NodeJs-Basic-Project.git
+cd NodeJs-Basic-Project
 ```
+
+2. **Gerekli Paketleri Yükleyin**
+```bash
+npm install
+# Not: Express bağımlılığında bir sorun yaşarsanız aşağıdaki komutu da çalıştırın:
+# npm install express
+```
+
+3. **Çevresel Değişkenleri Ayarlayın**
+Projenin ana dizininde bir `.env` dosyası oluşturun ve içerisine aşağıdaki gibi kendi ayarlarınızı ekleyin:
+```env
+PORT=5001
+# MongoDB bağlantı diziniz ve JWT_SECRET gibi diğer gerekli ortam değişkenlerini de buraya ekleyin.
+```
+
+4. **Uygulamayı Başlatın**
+```bash
+npm start
+```
+Sunucu başladığında terminalde `Server 5001 portunda çalışıyor...` mesajını göreceksiniz. Ardından isteklerinizi Postman veya benzeri bir API aracıyla test edebilirsiniz.
